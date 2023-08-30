@@ -455,7 +455,6 @@ link{
   line-height: 150%;
   letter-spacing: 0.32px;
   width: 264px;
-  margin: 0%;
   margin-top: 16px;
 }
 
@@ -480,75 +479,141 @@ link{
 /* footer-end */
 
 
-.filters {
+.portfolio-container {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.button-list {
   display: flex;
   justify-content: center;
   gap: 24px;
-  list-style-type: none;
   margin-bottom: 72px;
-  padding-left: 0px;
-
 }
 
-.filter-button {
-  color: var(--iris);
-  background: var(--cloud);
-  text-align: center;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 150%;
-  letter-spacing: 0.64px;
-  font-style: "inherit";
-  cursor: pointer;
+
+
+.portfolio-buttons {
   padding: 12px 24px;
   border-radius: 4px;
-  border: 1px solid var(--cornflower);
-  transition: background-color var(--animation),
-    color var(--animation), box-shadow var(--animation),
-    border var(--animation);
+  border: none;
+  outline: none;
+  background: var(--clout);
+  color: var(--brand-color);
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
 }
 
-.filter-button:hover,
-.filter-button:focus {
-  background-color: var(--ocean);
-  color: var(--cloud);
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
-    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--ocean);
+.portfolio-buttons:hover {
+  background: #404bbf;
+  color: #ffffff;
+  outline: none;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
-.projects-list {
-  list-style-type: none;
+.portfolio-buttons:focus {
+  background-color: #404bbf;
+  color: #ffffff;
+  outline: none;
+  box-shadow: 0px 2px 2px 0px #0000001f;
+  box-shadow: 0px 2px 1px 0px #00000014;
+  box-shadow: 0px 3px 1px 0px #0000001a;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.card-set {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 24px;
-  margin: 0;
-  padding: 0;
 }
 
-.projects-list li:hover {
+.item {
+  flex-basis: calc((100% - 48px) / 3);
+  border-bottom: 1px solid var(--cornflower);
+  position: relative;
+  overflow: hidden;
+}
 
-  box-shadow: var(--portfolio-shadow);
+.item:hover {
   cursor: pointer;
-
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.project-name {
-  color: var(--navy);
-  font-size: 20px;
+.card-caption {
+  padding: 32px 16px;
+}
+
+.portfolio-tittle {
+  font-family: "Roboto";
   font-weight: 500;
-  line-height: 120%;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--navy);
   letter-spacing: 0.4px;
-  margin-top: 0;
-  margin-bottom: 8px;
+  padding-bottom: 8px;
 }
 
-.project-type {
+.portfolio-description {
+  font-family: "Roboto";
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: 0.32px;
+  color: #434455;
+}
+
+.overlay p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0, 32px;
+  padding: 40px 32px 164px 32px;
   margin: 0;
+  width: 100%;
+  color: var(--clout);
+}
+
+.overlay {
+  color: white;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  background-color: var(--ocean);
+  transform: translate(0%, 150%);
+  transition: transform 250ms linear;
+}
+
+.img {
+  position: relative;
+  overflow: hidden;
+}
+
+.img:hover .overlay {
+  transform: translate(0%, 0%);
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  transition: opacity 250ms, visibility 250ms ease-in-out;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  ;
+  background-color: rgba(46, 47, 66, 0.40);
 }
 
 .container {
@@ -684,13 +749,12 @@ img {
 .footer-wrapper {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 72px;
-  column-gap: 24px;
+  row-gap: 72px;  
 }
 
 @media screen and (min-width: 1200px) {
   .footer-wrapper {
-    column-gap: 80px;
+ row-gap: 72px;
   }
 }
 
@@ -746,10 +810,6 @@ img {
 
 }
 
-.portfolio-section {
-  padding-top: 96px;
-  padding-bottom: 120px;
-}
 
 .customer-icon {
   border: 1px solid var(--light-slate);
