@@ -749,7 +749,6 @@ img {
 .footer-wrapper {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 72px;  
 }
 
 @media screen and (min-width: 1200px) {
@@ -789,7 +788,6 @@ img {
   background: #4D5AE5;
   width: 40px;
   height: 40px;
-  gap: 24px;
   border-radius: 50%;
   align-items: center;
 
@@ -801,7 +799,7 @@ img {
 }
 
 .footer-social {
-  margin-left: 120px;
+  margin: 0 80px 0 80px;
 }
 
 .footer-social-icons svg:hover {
@@ -1043,6 +1041,7 @@ img {
 
 .subscribe-wrapper {
   width: 100%;
+  gap: 80px;
 }
 
 @media screen and (min-width: 768px) {
