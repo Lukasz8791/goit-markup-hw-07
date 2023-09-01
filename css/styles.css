@@ -432,6 +432,16 @@ link{
 
 }
 
+.work-section{
+  display: none;
+}
+
+@media(min-width: 1200px) {
+  .work-section {
+    display: flex;
+  }
+}
+
 .work-name1 {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -452,12 +462,17 @@ link{
 }
 
 
+
+
 .footer-title {
   color: var(--white);
   font-weight: 500;
   text-align: center;
   display: block;
-  margin-bottom: 16px;
+}
+
+.foot-sub{
+  margin: 16px 0 16px;
 }
 
 @media (min-width: 768px) {
@@ -489,12 +504,13 @@ link{
   line-height: 1.17;
   letter-spacing: 0.54px;
   text-transform: uppercase;
-
+  padding: 0 25%;
 }
 
 @media (min-width: 768px) {
   .footer-logo {
     text-align: left;
+    padding: 0;
   }
 }
 
@@ -779,6 +795,12 @@ img {
   flex-wrap: wrap;
 }
 
+@media  and (max-width:767px) {
+  .footer-wrapper{
+    justify-content: center;
+}
+}
+
 @media screen and (min-width: 1200px) {
   .footer-wrapper {
  row-gap: 72px;
@@ -799,7 +821,7 @@ img {
 .footer-social-icons {
   display: flex;
   gap: 16px;
-  margin-top: 16px;
+ 
   justify-content: center;
 }
 
@@ -826,8 +848,28 @@ img {
   cursor: pointer;
 }
 
+.btn-center{
+  width: 100%;
+  justify-content: center;
+  padding: 0 20%;
+
+}
+@media (min-width:768px) {
+  .footer-social {
+    margin: 0 20px 0 20px;
+  }
+}
+
+@media (min-width:1200px){
 .footer-social {
   margin: 0 80px 0 80px;
+}
+}
+
+@media (max-width:767px) {
+  .footer-wrapper {
+    gap: 72px;
+  }
 }
 
 .footer-social-icons svg:hover {
@@ -1067,20 +1109,31 @@ img {
   background-color: var(--ocean);
 }
 
-.subscribe-wrapper {
-  width: 100%;
-  gap: 80px;
-}
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .subscribe-wrapper {
     display: flex;
-    gap: 24px;
+    margin-top: 72px;
     width: auto;
   }
 }
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 1200px){
+  .subscribe-wrapper{
+    display: flex;
+  }}
+
+@media screen and (max-width: 767px) {
+  .subscribe-email{
+    width: 398px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-wrapper {
+    justify-content: center;
+  }
+}
 
 .subscribe-email {
   width: 264px;
@@ -1091,7 +1144,7 @@ img {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   padding-top: 8px;
   padding-bottom: 8px;
-  padding-left: 16px;
+  
   color: var(--white);
 }
 
@@ -1134,7 +1187,6 @@ img {
   font-style: "inherit";
   border-radius: 4px;
   border: none;
-  margin-left: 20px;
   margin-right: 0px;
   transition: background-color var(--animation);
 }
@@ -1143,6 +1195,7 @@ img {
   .subscribe-button {
     margin-top: 34px;
     margin-right: 40px;
+    margin-left: 20px;
   }
 }
 
