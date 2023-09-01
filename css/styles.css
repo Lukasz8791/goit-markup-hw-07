@@ -69,7 +69,7 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-link{
+link {
   text-decoration: none;
 }
 
@@ -175,9 +175,9 @@ link{
 }
 
 @media screen and (min-device-pixel-ratio: 2),
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .hero-image {
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/people-office2x.jpg);
@@ -202,7 +202,6 @@ link{
     max-height: 600px;
   }
 }
-
 
 .title {
   color: var(--white);
@@ -265,7 +264,6 @@ link{
   margin: 0px;
   padding: 0px;
 }
-
 
 .feature {
   text-align: center;
@@ -340,6 +338,13 @@ link{
   margin-bottom: 72px;
 }
 
+@media screen and (min-width: 1200px) {
+  .section-header{
+    padding-top: 120px;
+  }
+  
+}
+
 .header {
   color: var(--navy);
   text-align: center;
@@ -361,13 +366,11 @@ link{
   margin: 0;
 }
 
-@media (min-width: 1200px){
-  .spec-list{
+@media (min-width: 1200px) {
+  .spec-list {
     display: flex;
   }
 }
-
-
 
 .team-list {
   display: flex;
@@ -386,7 +389,7 @@ link{
   }
 }
 
-.team-list>li {
+.team-list > li {
   background-color: var(--white);
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -403,11 +406,12 @@ link{
   display: flex;
   gap: 24px;
   margin-top: 8px;
+  margin-bottom: 32px;
   justify-content: center;
 }
 
 .icons-wrapper {
-  background: #4D5AE5;
+  background: #4d5ae5;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -415,9 +419,7 @@ link{
   width: 40px;
   height: 40px;
   fill: var(--cloud);
-
 }
-
 
 .worker-name {
   color: var(--navy);
@@ -429,14 +431,13 @@ link{
   padding: 0px;
   margin: 0;
   margin-bottom: 8px;
-
 }
 
-.work-section{
+.work-section {
   display: none;
 }
 
-@media(min-width: 1200px) {
+@media (min-width: 1200px) {
   .work-section {
     display: flex;
   }
@@ -456,13 +457,11 @@ link{
 }
 
 /* footer */
-.footer-box{
+.footer-box {
   background: var(--navy);
   padding: 100px 0;
+
 }
-
-
-
 
 .footer-title {
   color: var(--white);
@@ -471,13 +470,13 @@ link{
   display: block;
 }
 
-.foot-sub{
+.foot-sub {
   margin: 16px 0 16px;
 }
 
 @media (min-width: 768px) {
   .footer-title {
-  text-align: left;
+    text-align: left;
   }
 }
 
@@ -504,7 +503,8 @@ link{
   line-height: 1.17;
   letter-spacing: 0.54px;
   text-transform: uppercase;
-  padding: 0 25%;
+  display: flex;
+  justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -515,7 +515,6 @@ link{
 }
 
 /* footer-end */
-
 
 .portfolio-container {
   padding-top: 96px;
@@ -528,8 +527,6 @@ link{
   gap: 24px;
   margin-bottom: 72px;
 }
-
-
 
 .portfolio-buttons {
   padding: 12px 24px;
@@ -650,8 +647,7 @@ link{
   top: 0px;
   transition: opacity 250ms, visibility 250ms ease-in-out;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  ;
-  background-color: rgba(46, 47, 66, 0.40);
+  background-color: rgba(46, 47, 66, 0.4);
 }
 
 .container {
@@ -687,7 +683,6 @@ link{
   }
 }
 
-
 .section-header {
   color: var(--navy);
   text-align: center;
@@ -698,7 +693,6 @@ link{
   text-transform: capitalize;
   margin-bottom: 72px;
 }
-
 
 .work {
   padding-top: 0px;
@@ -727,13 +721,12 @@ link{
 }
 
 @media (min-width: 768px) {
-  .contacts{
+  .contacts {
     padding: 0;
   }
-  }
+}
 
-
-.projects-list>li {
+.projects-list > li {
   flex-basis: calc((100% - 48px) / 3);
 }
 
@@ -751,7 +744,6 @@ link{
 .projects-list img {
   display: block;
 }
-
 
 img {
   display: block;
@@ -773,7 +765,6 @@ img {
   .feature-icon {
     display: none;
   }
-
 }
 
 .customers {
@@ -792,18 +783,19 @@ img {
 
 .footer-wrapper {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
-@media  and (max-width:767px) {
-  .footer-wrapper{
+@media and (max-width: 767px) {
+  .footer-wrapper {
     justify-content: center;
-}
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .footer-wrapper {
- row-gap: 72px;
+    row-gap: 72px;
   }
 }
 
@@ -821,7 +813,7 @@ img {
 .footer-social-icons {
   display: flex;
   gap: 16px;
- 
+
   justify-content: center;
 }
 
@@ -835,12 +827,11 @@ img {
   display: flex;
   margin-top: 16px;
   justify-content: center;
-  background: #4D5AE5;
+  background: #4d5ae5;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   align-items: center;
-
 }
 
 .footer-social-icons :is(:hover, :focus) {
@@ -848,36 +839,32 @@ img {
   cursor: pointer;
 }
 
-.btn-center{
+.btn-center {
   width: 100%;
   justify-content: center;
-  padding: 0 20%;
-
+  display: flex;
 }
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .footer-social {
     margin: 0 20px 0 20px;
   }
 }
 
-@media (min-width:1200px){
-.footer-social {
-  margin: 0 80px 0 80px;
-}
+@media (min-width: 1200px) {
+  .footer-social {
+    margin: 0 80px 0 80px;
+  }
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .footer-wrapper {
     gap: 72px;
   }
 }
 
 .footer-social-icons svg:hover {
-
   cursor: pointer;
-
 }
-
 
 .customer-icon {
   border: 1px solid var(--light-slate);
@@ -888,8 +875,7 @@ img {
   width: 168px;
   height: 88px;
   fill: var(--light-slate);
-  transition: border-color var(--animation),
-    fill var(--animation);
+  transition: border-color var(--animation), fill var(--animation);
 }
 
 .customer-icon:hover {
@@ -897,9 +883,6 @@ img {
   fill: var(--ocean);
   cursor: pointer;
 }
-
-
-
 
 .social-icon {
   display: flex;
@@ -910,7 +893,7 @@ img {
   justify-content: center;
   background-color: var(--iris);
   fill: white;
-  transition: border-color var(--animation),
+  transition: border-color var(--animation);
 }
 
 .social-icon:hover,
@@ -927,7 +910,7 @@ img {
   justify-content: center;
   background-color: var(--iris);
   fill: white;
-  transition: border-color var(--animation),
+  transition: border-color var(--animation);
 }
 
 .social-icon-footer:hover,
@@ -1016,7 +999,7 @@ img {
   }
 }
 
-.modal-body>h3 {
+.modal-body > h3 {
   text-align: center;
   margin-top: 72px;
   margin-bottom: 16px;
@@ -1059,8 +1042,8 @@ img {
   height: 24px;
   fill: var(--navy);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: background-color var(--animation),
-    border var(--animation), fill var(--animation);
+  transition: background-color var(--animation), border var(--animation),
+    fill var(--animation);
 }
 
 .modal-close-button:hover,
@@ -1069,7 +1052,6 @@ img {
   fill: var(--white);
   border: 1px solid var(--ocean);
 }
-
 
 .is-hidden .modal-body {
   scale: 0;
@@ -1109,7 +1091,6 @@ img {
   background-color: var(--ocean);
 }
 
-
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .subscribe-wrapper {
     display: flex;
@@ -1118,13 +1099,14 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px){
-  .subscribe-wrapper{
+@media screen and (min-width: 1200px) {
+  .subscribe-wrapper {
     display: flex;
-  }}
+  }
+}
 
 @media screen and (max-width: 767px) {
-  .subscribe-email{
+  .subscribe-email {
     width: 398px;
   }
 }
@@ -1144,7 +1126,7 @@ img {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   padding-top: 8px;
   padding-bottom: 8px;
-  
+
   color: var(--white);
 }
 
@@ -1218,8 +1200,6 @@ img {
   justify-content: center;
   fill: white;
 }
-
-
 
 .subscribe-svg {
   height: 24px;
@@ -1312,7 +1292,7 @@ input[type="checkbox"] {
   transition: background-color var(--animation);
 }
 
-.checkbox:checked~.checkbox-icon {
+.checkbox:checked ~ .checkbox-icon {
   fill: var(--white);
   background-color: var(--ocean);
 }
@@ -1375,7 +1355,6 @@ input[type="checkbox"] {
   stroke-width: 2px;
 }
 
-
 .hamburger-menu {
   position: fixed;
   top: 0;
@@ -1383,7 +1362,7 @@ input[type="checkbox"] {
   width: 100vw;
   height: 100vh;
   padding: 32px;
-  background-color: #FFF;
+  background-color: #fff;
   z-index: 999;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
@@ -1404,16 +1383,6 @@ input[type="checkbox"] {
     display: none;
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 /* mobile menu */
 
@@ -1540,4 +1509,3 @@ input[type="checkbox"] {
   background-color: var(--iris);
   transition: background-color var(--animation);
 }
-
